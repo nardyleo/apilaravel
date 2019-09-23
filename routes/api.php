@@ -17,6 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('ocorrencias', function({
-//     return \App\Ocorrencia::
-// }))
+Route::get('ocorrencia', function(){
+    return \App\Ocorrencia::all();
+});
+
+
+Route::get('atendimento', function(){
+    return \App\Atendimento::all();
+});
